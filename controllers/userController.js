@@ -127,13 +127,13 @@ const getAllNotificationController = async (req, res) => {
     const updatedUser = await user.save();
     res.status(200).send({
       success: true,
-      message: "all notification marked as read",
+      message: "all notifications marked as read",
       data: updatedUser,
     });
   } catch (error) {
     console.log(error);
     res.status(500).send({
-      message: "Error in notification",
+      message: "Error in notifications",
       success: false,
       error,
     });

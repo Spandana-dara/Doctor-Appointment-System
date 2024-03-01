@@ -9,6 +9,7 @@ import Spinner from "./components/Spinner";
 import ProtectedRoute from "./components/ProtectedRoute";
 import PublicRoute from "./components/PublicRoute";
 import ApplyDoctor from "./pages/ApplyDoctor";
+import Notification from "./pages/Notification";
 
 function App() {
   const { loading } = useSelector((state) => state.alerts);
@@ -48,6 +49,14 @@ function App() {
               element={
                 <ProtectedRoute>
                   <ApplyDoctor />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/notification"
+              element={
+                <ProtectedRoute>
+                  <Notification />
                 </ProtectedRoute>
               }
             />
